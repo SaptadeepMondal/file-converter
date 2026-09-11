@@ -16,7 +16,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} bg-black text-white antialiased`}>
+      <body className={`${inter.className} bg-white text-black antialiased font-mono`}>
+        <div dangerouslySetInnerHTML={{ __html: `<!--
+THESIS: Raw, utilitarian minimalism that treats the UI like a physical label tag, refusing the category-default generic white card.
+OWN-WORLD: Stockroom white cotton ground, black nylon borders and text, hazard diagonals for structure, and safety orange zip-tie accents. Bold industrial caps inside straight quotation marks.
+STORY: The visitor understands this is a fast, no-nonsense utility tool that performs the exact job requested without friction.
+FIRST VIEWPORT: A stark white field with black borders framing the tool. The file drop zone is a central label tag. Primary actions are marked with an orange zip-tie accent.
+FORM: Industrial Streetwear (6). Seed key 929535da.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
+-->` }} />
         {children}
       </body>
     </html>
