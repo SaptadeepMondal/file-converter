@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Any2MD - The Universal Markdown Converter
 
-## Getting Started
+## Overview
+Any2MD converts documents, spreadsheets, web content, and images into concise, token-efficient Markdown for humans and AI agents.
 
-First, run the development server:
+This project is a decoupled monorepo:
+- **Frontend:** Next.js web showcase.
+- **Backend:** FastAPI Python app that will expose MCP tools over SSE.
 
+## Current Status
+- Frontend is a Next.js starter template.
+- Backend is a FastAPI skeleton with `/api/health` and `/api/mcp` placeholders.
+- Conversion pipeline, VLM/OCR, and real MCP tools are planned and documented in `.docs/`.
+
+## Project Structure
+- `Frontend/`: Next.js App Router showcase.
+- `Backend/`: FastAPI backend entry and dependencies.
+- `.docs/`: Architecture, workflows, design rationale, and agent rules.
+
+## Key Features / Roadmap
+- Universal format support: PDF, DOCX, XLSX, CSV, HTML, images.
+- VLM image transcription with OCR fallback.
+- MCP native via SSE.
+- Web interface with preview, copy, and download.
+
+## Setup Instructions
+
+### Frontend
 ```bash
+cd Frontend
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Backend
+```bash
+cd Backend
+pip install -r requirements.txt
+copy Backend\.env.example Backend\.env  # add your API keys
+uvicorn index:app --reload
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
+- **For humans:** Visit the web app to upload files and view Markdown output.
+- **For AI agents:** Configure MCP client to point at the backend SSE endpoint once implemented.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Notes
+- See `.docs/` for architecture, workflows, and design decisions.
+- Update `README.md` and `.docs/PROJECT_MAP.md` whenever the real implementation changes.
