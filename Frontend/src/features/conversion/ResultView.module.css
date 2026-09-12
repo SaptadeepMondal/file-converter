@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.tab {
+  background: none;
+  border: none;
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: all 200ms ease;
+}
+
+.tab:hover {
+  color: var(--text-primary);
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.activeTab {
+  color: var(--text-primary);
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 500px;
+  background-color: var(--bg-canvas);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.previewContent {
+  color: var(--text-primary);
+}
+
+.previewContent h1,
+.previewContent h2,
+.previewContent h3,
+.previewContent h4,
+.previewContent h5,
+.previewContent h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.previewContent p {
+  margin-bottom: 1em;
+}
+
+.previewContent blockquote {
+  border-left: 4px solid var(--border-subtle);
+  padding-left: 1rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-left: 0;
+  margin-bottom: 1em;
+  background-color: var(--bg-surface);
+}
+
+.previewContent table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+.previewContent th,
+.previewContent td {
+  border: 1px solid var(--border-subtle);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.previewContent th {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.rawContent {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.footer {
+  margin-top: auto;
+}

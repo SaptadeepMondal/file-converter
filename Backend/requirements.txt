@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+mcp
+pydantic
+python-multipart
+python-docx
+PyMuPDF
+pandas
+openpyxl
+beautifulsoup4
+markdownify
+openai

@@ -1,9 +1,0 @@
-fastapi
-python-multipart
-uvicorn
-markdown
-xhtml2pdf
-mammoth
-markdownify
-htmldocx
-python-docx
