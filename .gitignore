@@ -12,17 +12,13 @@ node_modules/
 
 # testing
 /coverage
-/Frontend/coverage
 
 # next.js
 .next/
 out/
-Frontend/.next/
-Frontend/out/
 
 # production
 /build
-Frontend/build
 
 # Python
 __pycache__/
@@ -68,8 +64,6 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
-Backend/.env*
-Frontend/.env*
 
 # vercel
 .vercel
