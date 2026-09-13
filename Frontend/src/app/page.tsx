@@ -21,8 +21,8 @@ export default function Home() {
     formData.append('file', uploadedFile);
 
     try {
-      // Connect to the backend (proxied locally, serverless in production)
-      const response = await fetch('/api/convert', {
+      // Connect to the local FastAPI backend
+      const response = await fetch('http://127.0.0.1:8000/api/convert', {
         method: 'POST',
         body: formData,
       });
