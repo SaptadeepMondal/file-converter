@@ -10,3 +10,4 @@ openpyxl
 beautifulsoup4
 markdownify
 openai
+httpx
